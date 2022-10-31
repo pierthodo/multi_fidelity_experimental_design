@@ -7,6 +7,7 @@ from pde import DiffusionPDE, ScalarField, UnitGrid
 from emukit.core.acquisition.acquisition_per_cost import acquisition_per_expected_cost
 from tqdm import tqdm 
 
+
 class pde_runner:
     def __init__(self, param, f_y) -> None:
         self.param = param
@@ -39,8 +40,6 @@ class pde_runner:
             )
             self.state = FieldCollection([u, v])
 
-    def __call__(self, X):
-        return self.run(X)
 
     def run(self, X):
         Y = []
@@ -70,3 +69,7 @@ class pde_runner:
                 ]
             )
         return np.array(Y).reshape((-1, 1))
+
+
+    def __call__(self, X):
+        return self.run(X)
