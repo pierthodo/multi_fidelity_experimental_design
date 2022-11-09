@@ -6,5 +6,5 @@ setup(name="mfed",
       description="A package for multi-fidelity experimental design on PDE",
       author="Pierre Thodoroff",
       author_email='pierthodo@gmail.com',
-      packages=['mfed'],
+      packages=find_packages(),
       )
