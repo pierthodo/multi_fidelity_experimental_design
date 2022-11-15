@@ -4,6 +4,7 @@ This repository contains the code for the multi experimental design algorithm us
 
 ```
 conda create -n mfed python=3.8
+conda activate mfed
 git clone https://github.com/pierthodo/multi_fidelity_experimental_design.git
 cd multi_fidelity_experimental_design
 pip install -r requirements.txt
